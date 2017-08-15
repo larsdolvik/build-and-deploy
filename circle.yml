@@ -10,7 +10,7 @@ test:
    - grunt test
 
 
-  deployment:
+deployment:
   prod:
     branch: master
     heroku:
