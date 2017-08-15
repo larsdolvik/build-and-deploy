@@ -5,6 +5,6 @@ dependencies:
  post:
   - grunt build
 
- test:
+test:
   override:
    - grunt test
