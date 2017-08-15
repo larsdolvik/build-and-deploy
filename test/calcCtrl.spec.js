@@ -81,7 +81,7 @@ describe('the calculation controller', function () {
       });
     });
 
-    /*describe('minus operator', function () {
+    describe('minus operator', function () {
       var operator = 'minus';
 
       it('should calculate 2 - 2 = 0', function () {
@@ -125,7 +125,7 @@ describe('the calculation controller', function () {
 
         expect(ctrl.result).toBe(10);
       });
-    });*/
+    });
 
     describe('divide operator', function () {
       var operator = 'divide';
@@ -176,12 +176,27 @@ describe('the calculation controller', function () {
     describe('multiply operator', function(){
       var operator = 'multiply';
 
-      it('should not be implemented', function(){
+      it('multiply 10 * 10', function(){
         var ctrl = createController();
         ctrl.calculate(10, 10, operator);
 
-        expect(ctrl.result).toBe('Operator not implemented');
+        expect(ctrl.result).toBe(100);
       });
+
+      it('multiply 10 * 0', function(){
+          var ctrl = createController();
+          ctrl.calculate(10, 0, operator);
+
+          expect(ctrl.result).toBe(0);
+      });
+
+      it('muliply 10 * -1', function(){
+          var ctrl = createController();
+          ctrl.calculate(10, -1, operator);
+
+          expect(ctrl.result).toBe(-10);
+      });
+
     });
 
     it('undefined operator should not be implemented', function(){
