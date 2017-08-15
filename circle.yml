@@ -8,3 +8,10 @@ dependencies:
 test:
   override:
    - grunt test
+
+
+  deployment:
+  prod:
+    branch: master
+    heroku:
+      appname: lars-build-and-deploy
